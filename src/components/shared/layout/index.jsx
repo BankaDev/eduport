@@ -13,10 +13,10 @@ const Layout = ({ children }) => {
   ];
 
   const SocialIcons = [
-    { icon: "fa fa-facebook", link: "https://www.facebook.com/", label: "Facebook" },
-    { icon: "fa fa-twitter", link: "https://www.twitter.com/", label: "Twitter" },
-    { icon: "fa fa-linkedin", link: "https://www.linkedin.com/", label: "LinkedIn" },
-    { icon: "fa fa-instagram", link: "https://www.instagram.com/", label: "Instagram" },
+    { icon: "fa fa-facebook", link: process.env.REACT_APP_FACEBOOK_URL, label: "Facebook" },
+    { icon: "fa fa-twitter", link: process.env.REACT_APP_TWITTER_URL, label: "Twitter" },
+    { icon: "fa fa-linkedin", link: process.env.REACT_APP_LINKEDIN_URL, label: "LinkedIn" },
+    { icon: "fa fa-instagram", link: process.env.REACT_APP_INSTAGRAM_URL  , label: "Instagram" },
   ];
 
   return (
@@ -112,8 +112,8 @@ const Layout = ({ children }) => {
           <div>
             <h3 className="text-xl font-bold mb-3">Contact</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li>Contact Us</li>
-              <li>Support</li>
+              <li>{process.env.REACT_APP_SUPPORT_NUMBER}</li>
+              <li>{process.env.REACT_APP_SUPPORT_EMAIL}</li>
               <li>FAQs</li>
             </ul>
           </div>
