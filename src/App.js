@@ -6,6 +6,7 @@ import Faculty from './components/faculty';
 import ContactUs from './components/contact-us';
 import Login from './components/login';
 import NotFound from './components/not-found';
+import Test from './components/test';
 
 
 
@@ -20,6 +21,8 @@ function App() {
           <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/login' element={<Login />} />
           <Route path='*' element={<NotFound />} /> 
+
+          <Route path='/test' element={<Test />} />
 
         </Routes>
       </BrowserRouter>
