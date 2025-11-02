@@ -55,13 +55,14 @@ const Button = ({
 
   return (
     <button
+      {...rest}
       className={`
         ${models.color[color]} 
         ${models.variant[variant]} 
         ${models.size[size]} 
         ${models.rounded[rounded]} 
         ${shadow ? 'shadow-lg' : ''}
-        {...rest}
+        
         font-semibold transition duration-300
       `}
     >
