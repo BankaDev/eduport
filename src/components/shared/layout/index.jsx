@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
+import { useState } from "react";
+import Modal from "../modal";
 
 import Logo from "../logo";
 
+
+
 const Layout = ({ children }) => {
+  const [account,setAccount]=useState(false);
   const menuItems = [
     { path: "/", label: "Home" },
     { path: "/products", label: "Products" },
@@ -39,11 +44,12 @@ const Layout = ({ children }) => {
             ))}
           </ul>
 
-          <Link to="/login" aria-label="Login">
+          <Link to="/login" aria-label="Login" >
             <img
               src="https://eduport.webestica.com/assets/images/avatar/01.jpg"
               alt="User Avatar"
               className="rounded-full w-[50px] hover:scale-105 transition-transform duration-200"
+              onClick={()=>setAccount(true)}
             />
           </Link>
         </nav>
@@ -123,8 +129,20 @@ const Layout = ({ children }) => {
           &copy; 2024 EduPort. All rights reserved.
         </div>
       </footer>
+      <Modal open={account} close={() => setAccount(false)}>
+        <div className="">
+          <video
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            controls
+            className="rounded-md"
+          ></video>
+        </div>
+      </Modal>
+
     </div>
+   
   );
+   
 };
 
 export default Layout;
