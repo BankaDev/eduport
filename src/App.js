@@ -8,6 +8,7 @@ import Login from './components/login';
 import NotFound from './components/not-found';
 import Test from './components/test';
 
+import Test2 from './components/test2';
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='*' element={<NotFound />} /> 
 
           <Route path='/test' element={<Test />} />
+          <Route path='/test2' element={<Test2 />} />
 
         </Routes>
       </BrowserRouter>
