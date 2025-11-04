@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom scrollbar for sidenav */
+.sidenav::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidenav::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.5); /* slate-500-ish */
+  border-radius: 4px;
+}
+
+.sidenav::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.7);
+}
+
+.sidenav::-webkit-scrollbar-track {
+  background-color: transparent;
+}
