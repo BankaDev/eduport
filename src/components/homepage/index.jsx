@@ -1,11 +1,26 @@
 import { useState } from "react";
-import AdminLayout from "../shared/admin-layout";
+import Layout from "../shared/layout";
+import Hero from "./hero";
+import Analytics from "./analytics";
+import Courses from "./courses";
+import Modal from "../shared/modal";
+import Button from "../shared/button";
 
 const Homepage = () => {
-  
+  const [open, setOpen] = useState(false);
 
   return (
-    <AdminLayout>children</AdminLayout>
+    <Layout>
+      <Hero />
+      <Analytics />
+      <Courses />
+
+      <Button onClick={() => setOpen(true)}>Try Modal</Button>
+
+      <Modal open={open} close={() => setOpen(false)} title="Welcome!">
+        <p>This is your modal content area.</p>
+      </Modal>
+    </Layout>
   );
 };
 
