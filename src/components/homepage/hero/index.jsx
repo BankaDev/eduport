@@ -38,14 +38,19 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right Illustration */}
-        <div className="flex justify-center lg:justify-end">
-          <img
-            src="https://eduport.webestica.com/assets/images/element/07.png"
-            alt="Learning Illustration"
-            className="w-3/4  object-contain"
-          />
-        </div>
+          {/* Right Illustration */}
+          <div className="flex justify-center overflow-hidden items-center bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200  rounded-full  ">  
+
+            {/* Image Container */}
+            <div className=" z-10">
+              <img
+                src="https://eduport.webestica.com/assets/images/element/07.png"
+                alt="Learning Illustration"
+                className="transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+          </div>
+
       </div>
     </section>
   );

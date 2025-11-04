@@ -12,7 +12,7 @@ const models = {
     solid: "hover:opacity-90",
     light: "bg-opacity-20 hover:bg-opacity-30",
     outline: "border bg-transparent hover:bg-opacity-10",
-    text: "bg-transparent hover:underline"
+    text: "bg-transparent hover:underline text-blue-800 hover:bg-transparent"
   },
   size: {
     sm: "px-4 py-2 text-sm",
